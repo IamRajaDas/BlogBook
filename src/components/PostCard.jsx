@@ -15,6 +15,7 @@ function PostCard({$id, title, featuredImage}) {
             <h2
             className='text-xl font-bold'
             >{title}</h2>
+            <button className='bg-blue-100 p-2 mt-2 rounded-xl'>Read Me</button>
         </div>
     </Link>
   )
