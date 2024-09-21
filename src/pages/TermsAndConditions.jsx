@@ -2,10 +2,10 @@ import React from 'react';
 
 function TermsAndConditions() {
   return (
-    <div className="container mx-auto px-4 py-16">
+    <div className="container mx-auto px-16 py-16 dark:text-white">
       <h1 className="text-3xl font-bold mb-4">Terms & Conditions</h1>
 
-        <div className="p-4">
+        <div className="py-4">
             <h1>Terms and Conditions</h1>
             <p><strong>Last Updated: <b>05/08/2024 </b></strong></p>
             <p>Welcome to <b>blogbook</b> . By accessing or using our Blog, you agree to comply with and be bound by the following Terms and Conditions. Please read these terms carefully before using our Blog. If you do not agree with these terms, please do not use our Blog.</p>

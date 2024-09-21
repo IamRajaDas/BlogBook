@@ -7,7 +7,7 @@ export default function Card({name,followers,image,url}){
             <div className="relative h-[400px] w-[300px] rounded-lg m-4 hover:bg-white-100 hover:scale-105 transition duration-300">
                 <img
                     src={image}
-                    alt="AirMax Pro"
+                    alt="Profile Photo"
                     className="z-0 h-full w-full rounded-md object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent"></div>

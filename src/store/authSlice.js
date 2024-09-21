@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
     status : false,
+    theme: 'light',
     userData: null
 }
 
@@ -16,10 +17,16 @@ const authSlice = createSlice({
         logout: (state) => {
             state.status = false;
             state.userData = null;
+        },
+        lightTheme:(state)=>{
+            state.theme='light';
+        },
+        darkTheme:(state)=>{
+            state.theme='dark';
         }
      }
 })
 
-export const {login, logout} = authSlice.actions;
+export const {login, logout,lightTheme,darkTheme} = authSlice.actions;
 
 export default authSlice.reducer;
