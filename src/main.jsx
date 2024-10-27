@@ -22,26 +22,49 @@ import Help from './pages/Help.jsx'
 import { githubInfoLoader } from './pages/Help.jsx'
 import TermsAndConditions from './pages/TermsAndConditions.jsx'
 
+// const router = createBrowserRouter(
+//     createRoutesFromElements(
+//       <Route path='/' element={<App />}>
+//         <Route path='/' element={<Home />} />
+//         <Route path='/login' element={<AuthLayout authentication={false}><Login /></AuthLayout>} />
+//         <Route path='/signup' element={<AuthLayout authentication={false}><Signup /></AuthLayout>} />
+//         <Route path='/all-posts' element={<AuthLayout authentication={" "}><AllPosts /></AuthLayout>} />
+//         <Route path='/add-post' element={<AuthLayout authentication={" "}><AddPost /></AuthLayout>} />
+//         <Route path='/edit-post/:slug' element={<AuthLayout authentication={" "}><EditPost /></AuthLayout>} />
+//         <Route path='/post/:slug' element={<Post />} />
+//         <Route path='/Account' element={<Account />} />
+//         <Route 
+//         loader={githubInfoLoader}
+//         path='/help' 
+//         element={<Help />}
+//          />
+//         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+//       </Route>
+//     )
+//   )
+
+
 const router = createBrowserRouter(
-    createRoutesFromElements(
-      <Route path='/' element={<App />}>
-        <Route path='/' element={<Home />} />
-        <Route path='/login' element={<AuthLayout authentication={false}><Login /></AuthLayout>} />
-        <Route path='/signup' element={<AuthLayout authentication={false}><Signup /></AuthLayout>} />
-        <Route path='/all-posts' element={<AuthLayout authentication={""}><AllPosts /></AuthLayout>} />
-        <Route path='/add-post' element={<AuthLayout authentication={""}><AddPost /></AuthLayout>} />
-        <Route path='/edit-post/:slug' element={<AuthLayout authentication={true}><EditPost /></AuthLayout>} />
-        <Route path='/post/:slug' element={<Post />} />
-        <Route path='/Account' element={<Account />} />
-        <Route 
-        loader={githubInfoLoader}
-        path='/help' 
-        element={<Help />}
-         />
-        <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+  createRoutesFromElements(
+      <Route path="/" element={<App />}>
+          <Route index element={<Home />} />
+          <Route path="login" element={<AuthLayout authentication={false}><Login /></AuthLayout>} />
+          <Route path="signup" element={<AuthLayout authentication={false}><Signup /></AuthLayout>} />
+          <Route path="all-posts" element={<AuthLayout authentication={true}><AllPosts /></AuthLayout>} />
+          <Route path="add-post" element={<AuthLayout authentication={true}><AddPost /></AuthLayout>} />
+          <Route path="edit-post/:slug" element={<AuthLayout authentication={true}><EditPost /></AuthLayout>} />
+          <Route path="post/:slug" element={<Post />} />
+          <Route path="account" element={<Account />} />
+          <Route 
+              loader={githubInfoLoader} 
+              path="/help" 
+              element={<Help />} 
+          />
+          <Route path="terms-and-conditions" element={<TermsAndConditions />} />
       </Route>
-    )
   )
+);
+
 
 // const router = createBrowserRouter([
 //   {

@@ -17,8 +17,16 @@ function Help() {
 export default Help
 
 export const githubInfoLoader = async () => {
+  try {
     const response = await fetch('https://api.github.com/users/IamRajaDas')
+    if (!response.ok) {
+        throw new Error('Failed to fetch data')
+    }
     return response.json()
+} catch (error) {
+    console.error(error)
+    return { followers: 'N/A', avatar_url: '', error: error.message }
+}
 }
 
 // import { useLoaderData } from 'react-router-dom';
